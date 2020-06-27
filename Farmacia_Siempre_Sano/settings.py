@@ -15,6 +15,14 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+""" Con esta linea de codigo solucionas el problemas de los statics para los archivos css y js, 
+debes asegurarte de que si no funciona? mover la carpeta static a la base del proyecto
+donde esta el archivo manage.py
+
+"""
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static')
+),
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
